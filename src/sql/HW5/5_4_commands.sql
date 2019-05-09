@@ -1,0 +1,8 @@
+-- выборка всех фильмов от самый новых до самых старых по убыванию
+SELECT TITLE FROM MOVIE
+ORDER BY YEAR DESC
+
+-- выборка с таблицы MOVIE_STAT с наибольшими INTERNATIONAL_SALES по убыванию
+SELECT TITLE, INTERNATIONAL_SALES FROM MOVIE, MOVIE_STAT
+WHERE MOVIE.ID = MOVIE_STAT.MOVIE_ID
+ORDER BY INTERNATIONAL_SALES DESC;
